@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.typinglearn.twa",
+        "sha256_cert_fingerprints": ["89:90:29:63:F9:CB:7A:C7:03:E3:FA:ED:2B:F9:11:49:57:8C:4D:5B:84:2D:18:8A:E0:78:0D:EF:9A:ED:7E:B7"]
+      }
+    }]

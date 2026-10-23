@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "io.github.typinglearn.twa",
-        "sha256_cert_fingerprints": ["89:90:29:63:F9:CB:7A:C7:03:E3:FA:ED:2B:F9:11:49:57:8C:4D:5B:84:2D:18:8A:E0:78:0D:EF:9A:ED:7E:B7"]
+        "sha256_cert_fingerprints": ["B2:EB:82:39:A8:EA:D8:A4:35:61:04:33:2F:00:5C:C9:57:4E:F7:60:B3:E2:41:CA:D8:67:48:E0:60:E0:80:23"]
       }
     }]

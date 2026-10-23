@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>آموزش تایپ انگلیسی و فارسی</title>
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><meta name="theme-color" content="#0b7a75">
+<style>
+:root{--bg:#eaf1f2;--card:#fff;--ink:#10262e;--mute:#587078;--line:#cfdcdf;--acc:#0b7a75;--onacc:#fff;--bad:#c2410c;--cur:#ffd96b;--ok:#0b7a75;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 Vazirmatn,Tahoma,"Segoe UI",sans-serif}
+header{padding:20px 16px 8px;max-width:1100px;margin:auto}
+h1{margin:0;font-size:1.7rem;font-weight:800}
+header p{margin:2px 0 8px;color:var(--mute)}
+.tabs{display:flex;gap:8px}
+.tabs button{all:unset;cursor:pointer;padding:6px 18px;border-radius:9px;border:1px solid var(--line);background:var(--card);font-weight:600}
+.tabs button.on{background:var(--acc);color:var(--onacc);border-color:var(--acc)}
+main{max-width:1100px;margin:auto;padding:8px 16px 32px;display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+@media(max-width:820px){main{grid-template-columns:1fr}}
+aside{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 12px;max-height:80vh;overflow:auto}
+aside summary{cursor:pointer;font-weight:600;padding:8px 0}
+@media(min-width:821px){aside summary{display:none}aside{position:sticky;top:8px}}
+h3{margin:14px 0 4px;font-size:1rem;color:var(--acc)}
+.ls{display:flex;flex-direction:column;gap:2px}
+.ls button{all:unset;text-align:start;display:flex;justify-content:space-between;gap:8px;padding:6px 10px;border-radius:8px;cursor:pointer;font-size:.88rem;line-height:1.4}
+.ls button:hover{background:var(--bg)}
+button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.ls button.on{background:var(--acc);color:var(--onacc)}
+.ls small{white-space:nowrap}
+section.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+#ttl{margin:0 0 10px;font-size:1.05rem;font-weight:600}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.stats div{flex:1 1 90px;background:var(--bg);border-radius:10px;padding:6px 10px;text-align:center}
+.stats b{display:block;font-size:1.3rem;font-weight:800}
+.stats span{font-size:.78rem;color:var(--mute)}
+#bw{position:relative}
+#box{position:relative;font:500 1.45rem/2.1 "Roboto Mono",Consolas,"Courier New",monospace;border:2px solid var(--line);border-radius:10px;padding:10px 16px;cursor:text;height:200px;overflow-y:auto}
+#box.fa{font:500 1.6rem/2.3 Vazirmatn,Tahoma,"Segoe UI",sans-serif}
+#bw:focus-within #box{border-color:var(--acc)}
+.w{display:inline-block;white-space:pre}
+.c{color:#000}
+.c.ok{color:#16a34a}
+.c.cur{background:var(--cur);color:#000;border-radius:4px}
+.c.bad{color:#dc2626;background:#fee2e2;border-radius:4px}
+#cap{position:fixed;left:0;bottom:0;width:1px;height:1px;opacity:0;border:0;padding:0;font-size:16px}
+#hint{margin:10px 0;color:var(--mute);min-height:1.7em}
+#kb{direction:ltr;display:flex;flex-direction:column;gap:5px;align-items:center;margin-top:8px;user-select:none}
+.r{display:flex;gap:5px}
+.k{width:clamp(22px,6.4vw,46px);height:clamp(26px,7vw,46px);border-radius:7px;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font:500 clamp(.7rem,2.4vw,1rem) Vazirmatn,Tahoma,"Roboto Mono",monospace}
+.k.sp{width:clamp(130px,40vw,280px)}
+.k.nx{background:var(--cur);color:var(--ink);border-color:var(--ink);transform:translateY(2px)}
+.f0{border-bottom:4px solid #d9486e}.f1{border-bottom:4px solid #e08a1e}.f2{border-bottom:4px solid #c9b000}.f3{border-bottom:4px solid #3aa655}
+.f4{border-bottom:4px solid #2c9bb8}.f5{border-bottom:4px solid #4a6fd6}.f6{border-bottom:4px solid #8a5bd0}.f7{border-bottom:4px solid #c056a8}
+.row2{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.btn{all:unset;cursor:pointer;background:var(--acc);color:var(--onacc);padding:8px 18px;border-radius:9px;font-weight:600}
+.btn.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+#res{display:none;margin-top:14px;border:2px solid var(--acc);border-radius:12px;padding:14px;text-align:center}
+#res.show{display:block}
+#res h2{margin:0 0 4px;font-size:1.25rem}
+#stars{font-size:1.8rem;letter-spacing:4px;color:#e0a800}
+footer{max-width:1100px;margin:auto;padding:0 16px 24px;color:var(--mute);font-size:.85rem}
+.who{font-weight:800;font-size:1.2rem;color:var(--acc);letter-spacing:.06em;margin:2px 0 4px}
+.mute{color:var(--mute)}
+.btn.big{display:inline-block;font-size:1.2rem;padding:12px 28px;margin:8px 0}
+#play{display:none}
+.bar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap}
+.bar b{color:var(--acc)}
+.panel.full{position:fixed;inset:0;z-index:50;border-radius:0;border:0;overflow:auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.panel.full #play{display:flex;flex-direction:column;min-height:100%}
+.panel.full #intro{display:none}
+.panel.full #box{height:auto;max-height:none;overflow:visible;font-size:clamp(2.2rem,7vw,3.6rem);line-height:2}
+.panel.full #box.fa{font-size:clamp(2.4rem,7.5vw,3.8rem);line-height:2.2}
+#bw{flex:1}
+.panel.full #box{font-weight:800}
+#dock{position:sticky;bottom:0;margin-top:auto;background:var(--card);border-top:1px solid var(--line);padding:6px 0 calc(8px + env(safe-area-inset-bottom,0px))}
+#dock #hint{margin:2px 0 4px;font-size:.9rem}
+#dock .row2{margin-top:6px;justify-content:center}
+.panel.full.fin #bw,.panel.full.fin #dock{display:none}
+#res .stats{margin:14px 0}
+html[lang="en"] body{font-family:system-ui,"Segoe UI",Roboto,Arial,sans-serif}
+#dock #kb,#dock .r{gap:3px}
+#dock .k{width:clamp(17px,5.3vw,34px);height:clamp(22px,5.6vw,32px);font-size:clamp(.62rem,2.1vw,.85rem);border-radius:6px}
+#dock .k.sp{width:clamp(110px,34vw,220px)}
+#dock .btn{padding:6px 14px;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <h1 data-i="h1">آموزش تایپ انگلیسی و فارسی</h1>
+  <div id="who" class="who" dir="auto"></div>
+  <p data-i="sub">از ردیف اصلی شروع کنید و قدم به قدم تا تایپ سریع و بدون خطا پیش بروید.</p>
+  <div class="tabs"><button id="tEn">English Typing</button><button id="tFa">تایپ فارسی</button></div>
+</header>
+<main>
+  <aside><details id="menu" open><summary data-i="menu">فهرست درس‌ها</summary><div id="list"></div></details></aside>
+  <section class="panel" id="pn">
+    <div id="intro"><h2 id="ttl" dir="auto"></h2><p id="best" class="mute"></p>
+      <button class="btn big" id="go" data-i="go">▶ شروع تمرین</button>
+      <p class="mute" data-i="goNote">با زدن این دکمه، یک صفحه بزرگ برای تمرین باز می‌شود.</p>
+      <div class="row2"><button class="btn alt snd">🔊 صدا روشن</button><button class="btn alt kbt">⌨ کیبورد روشن</button></div></div>
+    <div id="play">
+      <div class="bar"><b id="who2" dir="auto"></b><span id="ttl2" dir="auto"></span><button class="btn alt" id="close" data-i="close">✕ بستن</button></div>
+      <div id="bw"><div id="box"><div id="txt"></div></div>
+        <input id="cap" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="اینجا تایپ کنید"></div>
+      <div id="res"><h2 id="rt"></h2><div id="stars"></div>
+        <div class="stats">
+          <div><b id="sT">0:00</b><span data-i="lT">زمان</span></div>
+          <div><b id="sA">100%</b><span data-i="lA">دقت</span></div>
+          <div><b id="sW">0</b><span data-i="lW">سرعت (WPM)</span></div>
+          <div><b id="sE">0</b><span data-i="lE">اشتباه</span></div>
+          <div><b id="sP">0%</b><span data-i="lP">پیشرفت دوره</span></div>
+        </div>
+        <p id="rd"></p>
+        <div class="row2" style="justify-content:center"><button class="btn alt" id="again" data-i="again">تکرار درس</button><button class="btn" id="next" data-i="btnNext">درس بعدی</button></div></div>
+      <div id="dock"><div id="hint" data-i="hint0">روی صفحه بزنید و شروع به تایپ کنید.</div><div id="kb"></div>
+        <div class="row2"><button class="btn alt" id="restart" data-i="restart">شروع دوباره (Esc)</button><button class="btn alt snd">🔊 صدا روشن</button><button class="btn alt kbt">⌨ کیبورد روشن</button></div></div>
+    </div>
+  </section>
+</main>
+<footer id="note"></footer>
+<script>
+const FA={q:'ض',w:'ص',e:'ث',r:'ق',t:'ف',y:'غ',u:'ع',i:'ه',o:'خ',p:'ح','[':'ج',']':'چ',a:'ش',s:'س',d:'ی',f:'ب',g:'ل',h:'ا',j:'ت',k:'ن',l:'م',';':'ک',"'":'گ',z:'ظ',x:'ط',c:'ز',v:'ر',b:'ذ',n:'د',m:'پ',',':'و','.':'.','/':'/'};
+const WE="the be to of and a in that have it for not on with he as you do at this but his by from they we say her she or an will my one all would there their what so up out if about who get which go me when make can like time no just him know take people into year your good some could them see other than then now look only come its over think also back after use two how our work first well way even new want because any these give day most is are was were been has had did said each tell does set three put home read hand large spell add land here must big high such follow act why ask men change went light kind off need house try again animal point mother world near build self earth father head stand own page should country found answer school grow study still learn plant cover food sun four between state keep eye never last let thought city tree cross farm hard start might story saw far sea draw left late run while press close night real life few north open seem together next white children begin got walk example ease paper group always music those both mark often letter until mile river car feet care second book carry took science eat room friend idea fish mountain stop once base hear horse cut sure watch color face wood main enough plain girl usual young ready above ever red list though feel talk bird soon body dog family direct leave song sad lad dad fall flask glad half hall salad shall slash flag lash dash".split(" ");
+const WF="من تو او ما شما این که را با از در به برای هر همه یک دو سه روز شب سال ماه کار خانه کتاب دست دل دوست ابر نان راه شهر کشور مدرسه درس زمان خوب بد بزرگ کوچک نو دنیا زندگی همیشه هیچ بسیار کم بیش اگر ولی اما پس تا چون ایران افغانستان زبان کودک پدر مادر برادر خواهر امروز فردا دیروز سلام خدا دانش تایپ کلید صفحه سرعت دقت تمرین حرف کلمه انگشت چشم سر پا باد دریا کوه گل باغ سبز سرخ سفید شاد دانا".split(" ");
+const BE=[["Basic Practice","the sun is up and the day is new. we sit at the desk and type with care."],["Use All Fingers","every finger has a home. rest them on the home row and reach out one key at a time."],["Increase Your Speed","speed comes from rhythm. keep a steady beat and let the words flow without a pause."],["Numbers","call 555 0142 on 12 june 2026 and buy 3 pens, 4 books, and 20 cards for 15 students."],["Good Posture","sit straight, keep your feet flat, and let your wrists float above the keys."],["Take a Break","look away from the screen now and then. a short rest helps your eyes and your hands."],["Achieve and Believe","you can achieve what you believe. small steps each day lead to a great result."],["Accept and Except","i accept every gift except the last one. all the lessons are done except one."],["To, Too, Two","i want to go too. there are two of us, and the road is too long to walk."],["By, Bye, Buy","i will stop by the shop to buy bread. then i say bye and walk home by the river."]];
+const BF=["هر روز کمی تمرین کنید تا سرعت شما بیشتر شود.","با دقت تایپ کنید و به صفحه کلید نگاه نکنید.","دانش بهترین دوست انسان است و درس خواندن هیچ وقت دیر نیست.","ما با هم کار می کنیم و برای ساختن کشور خود تلاش می کنیم.","کتاب خواندن به ما دانش و نیرو می دهد.","هر کس تلاش کند به هدف خود می رسد.","وقتی خسته شدید کمی استراحت کنید و بعد دوباره شروع کنید.","نشستن درست و دست های راحت به تایپ سریع کمک می کند."];
+const STORIES={en:{f:"fiona and her father lived in a small farm house far from the city. every friday, fiona fed the chickens, fixed the fence, and filled the water for the four fat sheep. her father, frank, was a fisherman before he became a farmer, and he often told her fine stories about the fast river and the fish he found there. one foggy morning, fiona found a funny little box near the fence. the box was soft and warm, and inside it was a fluffy fox cub. the cub was so small that it fit in her hand. fiona felt a flutter in her heart. she ran to find her father and cried, father, father, i found a friend. frank frowned at first, for a fox is a wild animal, and a farm full of hens is not a safe place for a fox. but when he saw the frightened face of the cub, his heart softened. we will feed him for a few days, said frank, and when he is strong, we will set him free. fiona was fine with that plan. she named the cub fudge, for his fur was the color of fresh fudge. every morning fiona fetched fresh milk, and every afternoon she found fruit and food for fudge. the fox grew faster than anyone had foreseen. in a few weeks he followed her around the field, and he fell asleep at her feet by the fire. but one frosty friday, fudge was gone. the door of the shed was open, and a trail of small footprints led to the forest. fiona felt her stomach fall. she fought back tears and followed the footprints, past the frozen fountain, past the old fig tree, and far into the dark forest. the wind was fierce and the fog grew thicker, but she did not stop. at last, in a quiet field of ferns, she saw fudge. he was not alone. beside him stood a large female fox, and two little cubs played near her feet. fudge looked at fiona, and for a moment the whole forest felt still. then he gave a soft, friendly cry, as if to say, thank you for everything, my friend. fiona smiled through her tears. she understood now that fudge had found his family. she waved a last farewell and walked home slowly, feeling both sad and full of joy. when she told her father, frank hugged her tight. you did the right thing, he said, because real friendship means setting free the one you love. from that day on, fiona left a little food at the edge of the forest each friday. and every spring, as the first flowers opened and the fog lifted, she would see a fox with a fluffy tail watching from far away, and she knew that her friend had never forgotten her."},fa:{"ب":"بهار بود و باغ بزرگ بابا پر از بوی گل بود. بهرام پسر کوچک باغبان بود و هر روز با بابا به باغ می رفت. بابا به او می گفت بهرام باغ مثل یک کتاب است و هر برگ باغ یک درس برای ما دارد. بهرام این حرف ها را دوست داشت و با دقت به باغ نگاه می کرد. یک روز صبح بهرام زیر درخت بادام یک بلبل کوچک دید. بال بلبل زخمی بود و بدن او می لرزید. بهرام با مهربانی بلبل را برداشت و به خانه برد. بابا گفت بیمار را باید با صبر نگه داری کرد. بهرام برای بلبل یک لانه ساخت و با برگ و پنبه لانه را نرم کرد. بعد کمی شیر و دانه برای او گذاشت. هر روز بعد از مدرسه بهرام به بلبل سر می زد. بلبل کم کم بهتر شد و بعد از چند هفته بال های او قوی شد. بهرام برای بلبل بازی می کرد و بلبل برای او نغمه می خواند. نغمه بلبل مثل باران بهاری بود و دل بهرام را شاد می کرد. بابا هم هر وقت این نغمه را می شنید لبخند می زد. تابستان رسید و باغ پر از میوه شد. بلبل حالا می توانست به بالای ابرها برود ولی هر بار به باغ برمی گشت. یک روز بهرام به بابا گفت بلبل باید به خانه خودش برود. بابا گفت بله بچه من پرنده باید رها باشد. بهرام کمی غصه خورد ولی می دانست که بابا درست می گوید. صبح بعد بهرام بلبل را به بالای بلندترین تپه برد. باد ملایم می وزید و هوا پاک بود. بهرام دست خود را باز کرد و گفت برو بلبل عزیز و به سلامت باش. بلبل لحظه ای به او نگاه کرد و بعد بال زد و بالا رفت. بهرام تا مدت ها به او نگاه کرد تا بلبل میان ابرها گم شد. همان شب بهرام با غم به خانه برگشت ولی بابا در را باز کرد و گفت بهرام بیا ببین. روی شاخه بادام بلبل نشسته بود و برای او نغمه می خواند. بهرام با خوشحالی خندید و فهمید که دوستی واقعی هیچ وقت از بین نمی رود. از همان روز هر بهار بلبل به باغ برمی گشت و بهرام و بابا با هم به نغمه او گوش می دادند. بهرام بزرگ شد و باغبان بزرگ شد. او به بچه های باغ می گفت بهترین باغ همین است که پر از مهربانی باشد و بهترین دوست کسی است که برایش بهتر از خودت بخواهی."}};
+const BANK={en:{a:"adam apple arrow anchor apron album ant acorn attic angel axe atlas alarm",b:"ben box bread bridge basket bottle button bucket blanket bird book branch bell bag",c:"cara cat cup candle castle coin cloud cake clock cave carpet camel cart",d:"dan door drum doll duck dish diamond dress desk dragon dolphin doctor dream",e:"eva egg engine eagle elephant envelope earring elbow evening ember easel emerald",g:"gina garden gate glove gift glass goat grape ghost giant guitar ginger goose",h:"hugo hat house hammer horse honey hill harp heart hen helmet hammock harbor",i:"ivy ice island iron insect ink igloo idea inn image instrument iceberg ivory",j:"jack jar jacket jungle jewel juice jelly jug jet jam journey judge jigsaw",k:"kate key kite king kettle kitten kitchen knife kingdom knot kangaroo kayak koala",l:"leo lamp ladder lemon leaf lion lake letter lantern lizard library lock lighthouse",m:"mia moon mirror mountain market map milk mouse monkey mitten melon magnet meadow",n:"noah nest needle necklace net notebook nut nurse nose nail napkin newspaper noodle",o:"olivia orange owl oven ocean onion oar orchard otter olive office octopus oyster",p:"paul pen pearl pocket pillow pencil parrot pumpkin picture puppet pie plate palace",q:"quinn queen quilt quiz quest quail question quarter bouquet banquet mosque antique squirrel",r:"rosa road rabbit ring rope river rose rain robot rocket rainbow ruler radio",s:"sam sun star shoe ship stone spoon sock stick soup stove school sandwich",t:"tom table tree train tower teapot tiger tent turtle ticket tulip torch tunnel",u:"uma umbrella uncle unicorn uniform ukulele urn utensil universe sugar rug mug cushion bus",v:"victor van vase violin village valley vest voice vine volcano vegetable voyage vulture",w:"will window wagon whale wolf watch wheel wall well wing wizard witch wallet",x:"xena box fox taxi axe exam mixer wax saxophone text xylophone oxygen index",y:"yara yard yacht yarn yogurt yak yolk yoyo yam tray berry puppy daisy",z:"zara zebra zoo zero zipper zone puzzle pizza dozen lizard razor breeze zigzag"},fa:{"ض":"ضیا ضیافت قاضی فضا ضربه عضو ریاضی مریض وضو","ص":"صالح صندوق صبح صدا صحرا صابون صندلی صفحه صخره صدف","ث":"ثریا ثروت مثلث مثال ثانیه اثر میراث حدیث حادثه","ق":"قاسم قلم قایق قفل قلب قوری قصر قفسه قالی قطار قاشق قلعه","ف":"فرهاد فیل فنجان فرش فانوس فرشته فواره فرزند فرودگاه","غ":"غلام غذا غار غنچه غزال غبار غاز غرفه غواص","ع":"عباس عروسک عصا عینک عسل عقاب علف عکس عمارت","ه":"هاشم هویج هلو هدیه هوا هیزم هواپیما هفته هنر","خ":"خالد خانه خرگوش خورشید خیمه خیار خط خاک خوشه خرس خمیر","ح":"حامد حوض حلقه حیوان حلوا حصیر حیاط حباب حوله","ج":"جمشید جعبه جنگل جارو جوراب جزیره جام جاده جوجه","چ":"چنگیز چای چراغ چتر چشمه چاقو چمن چوب چکمه","ش":"شیرین شمع شیر شب شانه شیشه شهر شتر شکلات","س":"سعید سیب ساعت سبد سفره سنگ سبزی سیم","ی":"یوسف یخ یاقوت یونجه یاس یخچال یادگار","ل":"لیلا لیوان لباس لانه لاله لیمو لوله لبخند لحاف","ا":"احمد اسب انار ابر استکان اتاق انگشتر ایوان اره","ت":"تیمور تاج تخت تپه توپ تابلو تنور ترازو تاب","ن":"نسیم نان نمک نقشه نامه نهر نردبان نخ نگین","م":"مریم ماه ماهی میز میوه مداد موز مرغ مدرسه","ک":"کریم کتاب کلید کوه کفش کلاه کبوتر کودک کاسه","گ":"گلناز گل گربه گوسفند گلدان گاو گنجشک گردنبند گندم","ظ":"ظاهر ظرف ظهر لحظه حافظه ملاحظه","ط":"طاهر طوطی طناب طبل طاووس طلا طبقه طرح طوفان","ز":"زهرا زنبیل زنگ زرافه زمین زیتون زنبور زمستان زنجیر","ر":"رضا رود رادیو راه رنگ روباه رعد روزنامه ریسمان","ذ":"ذکریا ذره ذرت ذخیره ذهن","د":"داود در دریا دفتر دست دندان دوچرخه دیوار درخت","پ":"پرویز پنجره پرنده پرچم پله پیراهن پل پروانه پتو","و":"وحید ورق وزنه وسیله ویولن وانت"}};
+const TPL={en:"once upon a time, there was a kind child named {0}. {0} lived in a small house beside a quiet road, and every morning {0} carried a basket to the market. one day, {0} found one strange {1} lying by the road. the {1} was old and dusty, and inside it lay one tiny {2} and a folded note. the note said, bring the {2} to the old {3} on the hill, and you will find a great gift. {0} thought for a long time. then {0} packed some bread, one warm {4}, and one small {5}, and set off along the path. on the way, {0} met a tired traveler who carried one heavy {6}. the traveler said, i have walked for days and i have lost my {7}. {0} smiled and shared the bread, and the traveler gave {0} one shiny {8} as a present. soon the path grew steep, and a cold wind came down from the mountain. {0} wrapped the {4} around the {2} and kept walking, past the river, past the old {9}, and over the crooked bridge. at last, {0} reached the old {3} on the hill. a wise old woman sat beside the {3}, holding one big {10}. she said, i have waited for you, young {0}. you have brought the {2}, and you have been kind to the traveler. now you may choose one gift. on the table lay one golden {11}, one silver {12}, and one plain wooden {1}. {0} looked at each one and then said, i will take the plain {1}, because it was the first thing i found, and every journey begins with a small step. the old woman laughed with joy. she opened the {1}, and inside it was a map of the whole world. you chose wisely, she said, because the best gifts are the simple ones that remind us to be kind. {0} thanked her and walked home as the sun went down. from that day on, {0} kept the {1} on a shelf, and whenever someone came to the door with a problem, {0} shared bread, one warm {4}, and a good story.",fa:"روزی روزگاری یک بچه مهربان به نام {0} در یک خانه کوچک کنار راه زندگی می کرد. هر صبح {0} با یک سبد به بازار می رفت. یک روز {0} کنار راه یک {1} عجیب پیدا کرد. این {1} کهنه و پر از خاک بود و داخل همان یک {2} کوچک و یک نامه بود. در نامه نوشته بود این {2} را به {3} قدیمی بالای تپه ببر تا یک هدیه بزرگ پیدا کنی. {0} مدتی فکر کرد. بعد کمی نان و یک {4} گرم و یک {5} کوچک برداشت و به راه افتاد. در راه {0} یک مسافر خسته دید که یک {6} سنگین در دست داشت. مسافر گفت چند روز است که راه می روم و {7} خود را گم کرده ام. {0} لبخند زد و نان خود را با او تقسیم کرد و مسافر یک {8} زیبا به او هدیه داد. کم کم راه سخت شد و از کوه باد سرد وزید. {0} {4} را دور {2} پیچید و به راه خود ادامه داد و از کنار یک رود و از کنار {9} پیر و از روی یک پل کهنه گذشت. سرانجام {0} به {3} قدیمی بالای تپه رسید. یک پیرزن دانا کنار همان {3} نشسته بود و یک {10} بزرگ در دست داشت. پیرزن گفت من منتظر تو بودم. تو {2} را رساندی و با مسافر مهربان بودی. حالا می توانی یک هدیه انتخاب کنی. روی میز یک {11} طلایی و یک {12} نقره ای و یک {1} ساده بود. {0} به هر سه نگاه کرد و گفت من {1} ساده را برمی دارم چون اولین چیزی بود که پیدا کردم و هر سفر با یک قدم کوچک شروع می شود. پیرزن با شادی خندید و {1} را باز کرد و داخل همان نقشه همه دنیا بود. گفت تو درست انتخاب کردی چون بهترین هدیه ها همان چیزهای ساده ای هستند که به ما مهربانی را یاد می دهند. {0} از او تشکر کرد و هنگام غروب به خانه برگشت. از همان روز {0} {1} را بالای قفسه گذاشت و هر وقت کسی با یک مشکل به در خانه می رسید {0} نان و {4} گرم و یک داستان خوب با او تقسیم می کرد."};
+function makeStory(l,k){const b=BANK[l][k].split(" "),n=b.slice(1);return TPL[l].replace(/\{(\d+)\}/g,(m,i)=>+i?n[(+i-1)%n.length]:b[0])}
+function clean(s){const ok=fa()?new Set(Object.values(FA).concat([" "])):new Set("abcdefghijklmnopqrstuvwxyz ,.;/".split(""));return s.toLowerCase().split("").map(c=>c==="\n"?" ":c).filter(c=>ok.has(c)).join("").replace(/\s+/g," ").trim()}
+let muted=false,AC=null;try{muted=localStorage.getItem("tp2-mute")==="1"}catch(e){}
+function beep(good){if(muted)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==="suspended")AC.resume();
+const tone=(type,f1,pk,dur,at)=>{const t=AC.currentTime+(at||0),o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(f1,t);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(pk,t+.006);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+dur+.02)};
+if(good){tone("sine",1046,.15,.35);tone("sine",2093,.05,.2)}else{tone("triangle",500,.25,.1);tone("triangle",380,.25,.14,.1)}}catch(e){}}
+const T={en:{title:"English Typing Course",h1:"Learn English Typing",sub:"Start from the home row and move step by step to fast, error-free typing.",menu:"Lesson list",go:"▶ Start Practice",goNote:"This opens a large page for practice.",close:"✕ Close",lT:"Time",lA:"Accuracy",lW:"Speed (WPM)",lE:"Mistakes",lP:"Course progress",again:"Repeat lesson",btnNext:"Next lesson",hint0:"Tap the page and start typing.",restart:"Restart (Esc)",aria:"Type here",sndOn:"🔊 Sound on",sndOff:"🔇 Sound off",kbOn:"⌨ Keyboard: on",kbOff:"⌨ Keyboard: off",nk:"Next key: ",space:"Space",thumb:"Thumb",finger:"",nobest:"You haven't finished this lesson yet.",best:p=>"Best result: "+"★".repeat(p.stars)+" — "+p.wpm+" WPM — accuracy "+p.acc+"%",pass:"Well done! Lesson complete",fail:"More accuracy needed",rd:(old,dw,da,dn,N,st)=>{const sg=x=>(x>0?"+":"")+x;return (old?`Compared with your previous best: speed ${sg(dw)} and accuracy ${sg(da)}%.`:"This is your first result for this lesson.")+` You have completed ${dn} of ${N} lessons.`+(st?"":" You need at least 85% accuracy to pass; repeat the lesson.")},note:"Tip: don't look at the keyboard; type with all fingers. Correct letters turn green, wrong letters turn red, and practice continues."},
+fa:{title:"آموزش تایپ فارسی",h1:"آموزش تایپ فارسی",sub:"از ردیف اصلی شروع کنید و قدم به قدم تا تایپ سریع و بدون خطا پیش بروید.",menu:"فهرست درس‌ها",go:"▶ شروع تمرین",goNote:"با زدن این دکمه، یک صفحه بزرگ برای تمرین باز می‌شود.",close:"✕ بستن",lT:"زمان",lA:"دقت",lW:"سرعت (WPM)",lE:"اشتباه",lP:"پیشرفت دوره",again:"تکرار درس",btnNext:"درس بعدی",hint0:"روی صفحه بزنید و شروع به تایپ کنید.",restart:"شروع دوباره (Esc)",aria:"اینجا تایپ کنید",sndOn:"🔊 صدا روشن",sndOff:"🔇 صدا خاموش",kbOn:"⌨ کیبورد روشن",kbOff:"⌨ کیبورد خاموش",nk:"حرف بعدی: ",space:"فاصله (Space)",thumb:"شست",finger:"انگشت ",nobest:"هنوز این درس را تمام نکرده‌اید.",best:p=>"بهترین نتیجه: "+"★".repeat(p.stars)+" — "+p.wpm+" WPM — دقت "+p.acc+"%",pass:"آفرین! درس تمام شد",fail:"دقت بیشتر لازم است",rd:(old,dw,da,dn,N,st)=>{const sg=x=>(x>0?"+":"")+x;return (old?`نسبت به بهترین نتیجه قبلی: سرعت ${sg(dw)} و دقت ${sg(da)}%.`:"این اولین نتیجه شما در این درس است.")+` شما ${dn} درس از ${N} درس را تمام کرده‌اید.`+(st?"":" برای رد شدن دقت حداقل ۸۵٪ لازم است؛ درس را تکرار کنید.")},note:"برای این بخش، کیبورد فارسی (Persian) باید در کامپیوتر یا موبایل شما فعال باشد. به صفحه‌کلید نگاه نکنید و با همه انگشتان تایپ کنید. حرف درست سبز و حرف غلط قرمز می‌شود و تمرین ادامه پیدا می‌کند."}};
+const FNE=["Left pinky finger","Left ring finger","Left middle finger","Left index finger","Right index finger","Right middle finger","Right ring finger","Right pinky finger"];
+function applyUI(){const L=T[lang];document.querySelectorAll("[data-i]").forEach(e=>e.textContent=L[e.dataset.i]);document.title=L.title;$("cap").setAttribute("aria-label",L.aria);$("note").textContent=L.note;sndTxt();kbTxt()}
+const FN=["کوچک چپ","حلقه چپ","وسط چپ","اشاره چپ","اشاره راست","وسط راست","حلقه راست","کوچک راست"];
+const FP={};[["1qaz",0],["2wsx",1],["3edc",2],["4rfv5tgb",3],["6yhn7ujm",4],["8ik,",5],["9ol.",6],["0p;/[]'",7]].forEach(([k,v])=>k.split("").forEach(c=>FP[c]=v));
+const FULL="qwertyuiopasdfghjkl;zxcvbnm,[]'";
+const $=id=>document.getElementById(id);
+let lang="en",S=[],ALL=[],prog={},cur=0,text="",pos=0,ok=0,err=0,t0=0,tm=null,done=false,wrong=false,chars=[],st=[],playing=false;
+const fa=()=>lang==="fa", tl=c=>fa()?(FA[c]||c):c;
+const fing=c=>{const k=fa()?Object.keys(FA).find(x=>FA[x]===c):c;return FP[k]};
+function build(){
+  S=[];let pool="";
+  const nm=p=>p.split("").map(tl).join(fa()?" و ":" and ");
+  const T=(k,p)=>fa()?({intro:"معرفی کلیدهای ",prac:"تمرین کلیدهای ",rev:"مرور کلیدهای ",big:"۳۰۰ کلمه: "}[k]+nm(p)):({intro:"Intro to ",prac:"Practice of ",rev:"Review with ",big:"300 Words: "}[k]+nm(p)+" keys");
+  const sec=n=>{S.push({n,ls:[]});return S[S.length-1]};
+  const four=(s,p,skipRev)=>{pool+=p;
+    s.ls.push({t:T("intro",p),pool:p,focus:p,k:"intro",w:24});
+    s.ls.push({t:T("prac",p),pool,focus:p,k:"prac",w:60});
+    if(!skipRev)s.ls.push({t:T("rev",p),pool,focus:"",k:"rev",w:70});
+    s.ls.push({t:T("big",p),pool,focus:p,k:"big",w:300});};
+  let s=sec(fa()?"ردیف اصلی":"Home Row");
+  s.ls.push({t:fa()?"آشنایی با تایپ":"Introduction to Typing",text:"asdf jkl; asdf jkl; fj fj dk dk sl sl a; a; fdsa jkl; fdsa jkl;".split("").map(tl).join("")});
+  four(s,"fj",true);(fa()?["dk","sl","a;","gh"]:["dk","a;","sl","gh"]).forEach(p=>four(s,p));
+  s=sec(fa()?"ردیف بالا":"Top Row");["ru","ei","wo","qy","tp"].forEach(p=>four(s,p));
+  if(fa()){four(s,"[]")}
+  s=sec(fa()?"ردیف پایین":"Bottom Row");["vm","c,","x.","z/","bn"].forEach(p=>four(s,p));
+  s=sec(fa()?"سطح پایه":"Basic Level");
+  if(fa())BF.forEach((b,i)=>s.ls.push({t:"جمله‌های تمرینی "+(i+1),text:b+" "+b+" "+b,raw:1}));
+  else BE.forEach(b=>s.ls.push({t:b[0],text:b[1]+" "+b[1]+" "+b[1]}));
+  for(let i=1;i<=5;i++)s.ls.push({t:(fa()?"آزمون ۳۰۰ کلمه ":"300 Words Test ")+i,pool:FULL,focus:"",k:"big",w:300,real:1});
+  const ks=[...new Set(Object.keys(STORIES[lang]).concat(Object.keys(BANK[lang])))].sort((a,b)=>a.localeCompare(b,lang));
+  if(ks.length){s=sec(fa()?"داستان‌ها (حرف‌های بیشتر به‌زودی)":"Stories (more letters coming soon)");ks.forEach(k=>s.ls.push({t:(fa()?"داستان حرف ":"Story of letter ")+k.toUpperCase(),story:k}))}
+  let n=0;ALL=S.flatMap(x=>x.ls);ALL.forEach(l=>{l.id=n++;l.n=l.id+1});
+}
+function rnd(n){return Math.floor(Math.random()*n)}
+const WX={en:"as ask asks add adds all alas dad dads fad fads fall falls flag flags flask glad gala gas gash had hall halls has hash hag jag jags lad lads lag lags lass sad sag salad salads shall slash slag dash flash half hulk skull sulk dusk husk lurk hurl hug hugs rug rugs ugh far fur hard lard guard grass dark shark lark fuss gush rush lush hush sure rule rude ruler fire fires file files life like likes side sides hide ride rise slide sled sell sill silk skid kid kids kind king kiss lid lids slid said sail sails sale fish dish dishes dig fig fill fell self shell she shed her here hire girl sir fir irk ire real read dear deer feed feel fresh flea alike hike hikes seed need weed wide wise rise rice nice mice slice tree free green queen quiet quick quiz you your yes yet young year yard yellow zero zoo zone zebra buy bye boy bag big bus but box bed bread blue black brown bridge basket mom moon more most much made make many milk move music name near nest never note nose pen pie pig pink plan play plant plate pool post pot quit rain road room rope sand sea ship shoe shop show sing sit sky slow small snow song soon star stay stop story sun tea ten tent time tiny town toy trip true vase very view voice wait walk wall want warm wash watch water wave week west wind wing wish wood word work".split(" "),
+fa:"نی بین بیت نیت نبی با بد بر بس بن بی تا تب تر تن تو تک تپ تیر تیز تازه تاب تاج تخت تپه توپ تنور ترازو تابلو تلخ تمام تند تنها تلاش ثروت مثال اثر حدیث جا جان جنگل جوان جهان جشن جوجه جام جاده جعبه جمع چه چون چند چشم چای چراغ چتر چمن چوب حال حرف حق حیاط حوض حلقه حیوان حلوا خوب خود خانه خرس خیار خورشید خط خاک خوش خبر خواب دل در دو دست دیر دنیا دوست درخت دیوار دریا دفتر دانش دانه دهان دندان دوچرخه ذره ذرت ذهن را رو روز راه رنگ رود رعد روباه رادیو رفت زن زود زیبا زمین زنگ زیتون زرد زمان زمستان سر سه سال سبز سیب ساعت سبد سفره سنگ سیم ساده سرد سخت سلام سپید شب شد شهر شیر شمع شانه شیشه شاد شکلات شیرین صبح صدا صحرا صندوق صابون صندلی صفحه ضرب ضیافت طلا طوطی طناب طبل طرح ظرف ظهر عسل عقاب علف عکس عینک عصا عروسک غذا غار غروب غنچه غزال غاز فیل فرش فنجان فانوس فرشته فکر فردا فصل قلم قلب قفل قایق قوری قصر قفسه قالی قطار قاشق قلعه کار کوه کتاب کلید کفش کلاه کبوتر کودک کاسه کوچک کم کس که کی گل گاو گربه گندم گوسفند گلدان گفت گرم گرد لب لیوان لباس لانه لاله لیمو لوله لحاف ما من مرد مو میز میوه مداد موز مرغ مدرسه ماه ماهی مادر مهربان نان نمک نقشه نامه نهر نردبان نگین نیک نو نیمه هر هم هوا هدیه هفته هنر هوشیار وقت وزن ورق وسیله پا پر پس پدر پنجره پرنده پرچم پله پیراهن پل پروانه پتو پیر پاک پنیر پیاز یک یاد یخ یاس یخچال یار یاقوت".split(" ")};
+const SN={en:["she sells shells by the sea.","a dad had a sad lad.","all dads ask all lads.","he has a flask of milk.","the girl read a good book.","we like to walk in the park.","my father works at a school.","the sun rises in the east.","she made a cake for her friend.","i drink fresh milk every day.","the dog ran fast down the road.","birds sing in the green trees.","he fixed the old clock.","they study hard and learn fast.","the river is wide and deep.","our teacher reads a story.","i will call you after lunch.","a good friend is a gift.","the moon shines at night.","we play games after school.","please close the door quietly.","she wears a red scarf.","the children laugh and play.","he drinks hot tea each morning.","my sister paints beautiful pictures.","rain falls on the green field.","the baker bakes fresh bread.","we walk to the market together.","a kind word makes a good day.","the farmer feeds his sheep.","she asked a hard question.","learn a little every single day.","practice makes you faster.","keep your hands on the home row.","type with all your fingers.","the quick brown fox jumps over the lazy dog."],
+fa:["من هر روز تایپ می کنم.","او کتاب خوب می خواند.","ما به مدرسه می رویم.","هوا امروز خیلی سرد است.","مادر نان تازه پخت.","پدر من در باغ کار می کند.","کودک گل سرخ را دوست دارد.","دوست خوب مثل برادر است.","ما با هم به شهر رفتیم.","بچه ها در حیاط بازی می کنند.","سیب سرخ و شیرین است.","او یک گربه سفید دارد.","هر روز صبح شیر می نوشم.","درخت بزرگ سایه زیبا دارد.","من به دوستم نامه نوشتم.","کلید را روی میز گذاشتم.","پرنده بر شاخه درخت نشست.","ما شب ها کتاب می خوانیم.","دانش بهترین هدیه برای همه است.","تلاش و صبر کلید پیروزی است.","سرعت خوب با تمرین حاصل می شود.","هر کس صبر کند به هدف می رسد.","گل ها در بهار می رویند.","پیرمرد با نوه اش قدم می زد.","خانه ما کنار رود بزرگ است.","ماه شب ها بالای کوه می درخشد.","او با دقت نامه را خواند.","برادر کوچک من سیب دوست دارد.","دوستان خوب همیشه کنار هم هستند.","کودکان باید هر روز بازی کنند و درس بخوانند.","ساعت سه بعد از ظهر به خانه رسیدم.","هوای پاک برای همه خوب است.","پروانه روی گل نشست.","گوسفند در دشت می چرد.","نان و پنیر و سبزی غذای خوب است.","هر روز یک کار نیک انجام بده."]};
+function gen(l){
+  if(l.story)return clean(STORIES[lang][l.story]||makeStory(lang,l.story));
+  if(l.text)return l.text;
+  const P=l.pool.split("").map(tl),Fc=(l.focus||"").split("").map(tl),inP=w=>[...w].every(c=>P.includes(c));
+  const WL=(fa()?WF.concat(WX.fa):WE.concat(WX.en)).filter(inP);
+  const SL=SN[lang].filter(s=>inP(s.replace(/[ .]/g,"")));
+  if(l.k!=="intro"&&WL.length>=4){
+    const FW=Fc[0]?WL.filter(w=>Fc.some(c=>w.includes(c))):WL;
+    const pick=()=>{const src=FW.length>=4&&Math.random()<.7?FW:WL;return src[rnd(src.length)]};
+    const sen=s=>P.includes(".")?s:s.replace(/\./g,"");
+    const out=[],pS=l.k==="prac"?.2:.4;let c=0;
+    while(c<l.w){if(SL.length&&Math.random()<pS){const s=sen(SL[rnd(SL.length)]);out.push(s);c+=s.split(" ").length}else{const n=4+rnd(4);for(let i=0;i<n;i++)out.push(pick());c+=n}}
+    return out.join(" ");
+  }
+  const useReal=WL.length>=6&&l.k!=="intro",w=[];
+  for(let i=0;i<l.w;i++){
+    if(useReal&&(l.real||Math.random()<.5)){w.push(WL[rnd(WL.length)]);continue}
+    const len=l.k==="intro"?rnd(2)+2:rnd(3)+3;let x="";
+    for(let j=0;j<len;j++)x+=P[rnd(P.length)];
+    if(Fc[0]&&!Fc.some(c=>x.includes(c)))x=x.slice(0,-1)+Fc[rnd(Fc.length)];
+    w.push(x)}
+  return w.join(" ");
+}
+const key=()=>"tp2-"+lang;
+function save(){try{localStorage.setItem(key(),JSON.stringify(prog))}catch(e){}}
+function loadProg(){prog={};try{prog=JSON.parse(localStorage.getItem(key())||"{}")}catch(e){}}
+function buildList(){
+  $("list").innerHTML=`<button class="btn" id="goSt" style="margin:8px 0">📖 ${fa()?"داستان‌ها":"Stories"}</button>`+S.map(x=>`<h3${x.ls[0]&&x.ls[0].story?' id="stH"':''}>${x.n}</h3><div class="ls">`+x.ls.map(l=>{const p=prog[l.id];
+    return `<button data-i="${l.id}" class="${l.id===cur?"on":""}"><span>${l.n}. ${l.t}</span><small>${p?("★".repeat(p.stars)||"·"):""}</small></button>`}).join("")+`</div>`).join("");
+  $("list").querySelectorAll("button[data-i]").forEach(b=>b.onclick=()=>{load(+b.dataset.i);if(innerWidth<=820)$("menu").open=false});
+  $("goSt").onclick=()=>$("stH").scrollIntoView({block:"start"});
+}
+function buildKb(){
+  const R=fa()?["qwertyuiop[]","asdfghjkl;'","zxcvbnm,./"]:["1234567890","qwertyuiop","asdfghjkl;","zxcvbnm,./"];
+  $("kb").innerHTML=R.map((r,i)=>`<div class="r" style="margin-inline-start:${(fa()?i+1:i)*10}px">`+r.split("").map(c=>{const m=tl(c);return `<div class="k f${FP[c]}" data-k="${m}">${m}</div>`}).join("")+`</div>`).join("")+`<div class="r"><div class="k sp" data-k=" ">${fa()?"فاصله":"space"}</div></div>`;
+}
+function fmt(s){s=Math.floor(s);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")}
+function load(i){
+  cur=i;const l=ALL[i];text=gen(l);pos=0;ok=0;err=0;t0=0;done=false;wrong=false;st=[];clearInterval(tm);
+  const tt=(fa()?"درس ":"Lesson ")+l.n+": "+l.t;$("ttl").textContent=tt;$("ttl2").textContent=tt;showBest();$("res").classList.remove("show");$("pn").classList.remove("fin");$("pn").scrollTop=0;
+  $("box").className=fa()?"fa":"";$("txt").dir=fa()?"rtl":"ltr";$("box").scrollTop=0;
+  $("txt").innerHTML=text.split(" ").map((w,wi,a)=>`<span class="w">`+(w+(wi<a.length-1?" ":"")).split("").map(c=>`<span class="c">${c}</span>`).join("")+`</span>`).join("");
+  chars=[...document.querySelectorAll("#txt .c")];
+  upd();buildList();$("cap").focus({preventScroll:true});
+}
+function upd(){
+  chars.forEach((c,i)=>{c.className="c"+(i<pos?(st[i]===2?" bad":" ok"):i===pos?" cur":"")});
+  const nx=text[pos];
+  document.querySelectorAll(".k.nx").forEach(k=>k.classList.remove("nx"));
+  if(nx!==undefined){const k=document.querySelector(`.k[data-k="${CSS.escape(nx)}"]`);if(k)k.classList.add("nx");
+    const f=nx===" "?T[lang].thumb:(fa()?FN:FNE)[fing(nx)]||"";
+    $("hint").textContent=T[lang].nk+(nx===" "?T[lang].space:nx)+(f?" — "+T[lang].finger+f:"");
+    const c=chars[pos];if(c&&playing){const vv=window.visualViewport,vt=vv?vv.offsetTop:0,vh=vv?vv.height:window.innerHeight,r=c.getBoundingClientRect(),dk=$("dock").getBoundingClientRect().top,lim=Math.min(dk,vt+vh)-40;if(r.bottom>lim)$("pn").scrollTop+=r.top-(vt+vh*0.3)}}
+  const sec=t0?(Date.now()-t0)/1000:0,w=sec>1?Math.round(ok/5/(sec/60)):0;
+  $("sW").textContent=w;$("sA").textContent=(ok+err?Math.round(ok/(ok+err)*100):100)+"%";
+  $("sT").textContent=fmt(sec);$("sP").textContent=Math.round(pos/text.length*100)+"%";
+}
+function press(ch){
+  if(done||!playing)return;if(!t0){t0=Date.now();tm=setInterval(upd,300)}
+  if(ch===text[pos]){beep(1);st[pos]=1;ok++}else{beep(0);st[pos]=2;err++}
+  pos++;if(pos>=text.length)return finish();
+  upd();
+}
+function finish(){
+  done=true;clearInterval(tm);upd();
+  const sec=Math.max((Date.now()-t0)/1000,3),wpm=Math.round(ok/5/(sec/60)),acc=Math.round(ok/(ok+err)*100);
+  const st=acc>=97?3:acc>=92?2:acc>=85?1:0;
+  const old=prog[cur];if(!old||st>old.stars||(st===old.stars&&wpm>old.wpm))prog[cur]={stars:st,wpm,acc};save();
+  $("rt").textContent=st?T[lang].pass:T[lang].fail;
+  $("stars").textContent="★".repeat(st)+"☆".repeat(3-st);
+  $("sT").textContent=fmt(sec);$("sA").textContent=acc+"%";$("sW").textContent=wpm;$("sE").textContent=err;
+  const dn=ALL.filter(l=>prog[l.id]&&prog[l.id].stars>0).length;$("sP").textContent=Math.round(dn/ALL.length*100)+"%";
+  const dw=old?wpm-old.wpm:0,da=old?acc-old.acc:0,sg=x=>(x>0?"+":"")+x;
+  $("rd").textContent=T[lang].rd(old,dw,da,dn,ALL.length,st);
+  $("pn").classList.add("fin");$("pn").scrollTop=0;
+  $("next").style.display=cur<ALL.length-1?"":"none";
+  $("res").classList.add("show");buildList();
+}
+function showBest(){const p=prog[cur];$("best").textContent=p?T[lang].best(p):T[lang].nobest}
+function start(){playing=true;$("pn").classList.add("full");document.body.style.overflow="hidden";load(cur)}
+function stop(){playing=false;clearInterval(tm);$("pn").classList.remove("full");document.body.style.overflow="";showBest();buildList();window.scrollTo(0,0)}
+function setLang(l){
+  lang=l;document.documentElement.dataset.lang=l;document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr";const nm=l==="fa"?"صفی الله منصوری":"SAFIULLAH MANSORI";$("who").textContent=nm;$("who2").textContent=nm;
+  $("tEn").classList.toggle("on",l==="en");$("tFa").classList.toggle("on",l==="fa");
+  applyUI();
+  build();loadProg();buildKb();
+  let f=0;for(let i=0;i<ALL.length;i++){if(!prog[i]||!prog[i].stars){f=i;break}}
+  load(f);
+}
+$("cap").addEventListener("input",e=>{const v=e.target.value;e.target.value="";for(const c of v)press(fa()?c:c.toLowerCase())});
+$("cap").addEventListener("keydown",e=>{if(e.key==="Escape")load(cur)});
+$("bw").addEventListener("click",()=>$("cap").focus({preventScroll:true}));
+$("restart").onclick=()=>load(cur);$("again").onclick=()=>load(cur);$("next").onclick=()=>load(cur+1);
+const sndTxt=()=>document.querySelectorAll(".snd").forEach(b=>b.textContent=muted?T[lang].sndOff:T[lang].sndOn);sndTxt();
+document.querySelectorAll(".snd").forEach(b=>b.onclick=()=>{muted=!muted;try{localStorage.setItem("tp2-mute",muted?"1":"0")}catch(e){}sndTxt()});
+let kbShow=true;try{kbShow=localStorage.getItem("tp2-kb")!=="0"}catch(e){}
+const kbTxt=()=>{document.querySelectorAll(".kbt").forEach(b=>b.textContent=kbShow?T[lang].kbOn:T[lang].kbOff);$("kb").style.display=kbShow?"":"none"};kbTxt();
+document.querySelectorAll(".kbt").forEach(b=>b.onclick=()=>{kbShow=!kbShow;try{localStorage.setItem("tp2-kb",kbShow?"1":"0")}catch(e){}kbTxt();$("cap").focus({preventScroll:true})});
+$("tEn").onclick=()=>setLang("en");$("tFa").onclick=()=>setLang("fa");$("go").onclick=start;$("close").onclick=stop;
+if(innerWidth<=820)$("menu").open=false;
+if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
+setLang("en");
+</script>
+</body>
+</html>
